@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+*,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0%;
+  margin: 0%;
+  background-color: #25272b;
+  color: white;
+}
+.container {
+  margin: 2% 5%;
+}
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.line-numbered-textarea {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  background-color: #10121a;
+  padding: 15px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.line-numbers {
+  border-right: 1px solid #ccc;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  user-select: none;
+  background-color: #10121a;
 }
 
-.App-link {
-  color: #61dafb;
+.line-number {
+  font-size: 14px;
+  background-color: #10121a;
+  padding: 2px 15px;
+  padding-right: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-area {
+  border: none;
+  flex: 1;
+  padding: 10px;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #10121a;
+  min-height: 300px;
+  line-height: 1.4;
+}
+.note-section {
+  margin-top: 20px;
+}
+.show-example {
+  color: gray;
+}
+.next-btn {
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  background: var(
+    --Accent-5,
+    linear-gradient(90deg, #6052df -9.84%, #9932d7 99.72%)
+  );
+  font-size: 18px;
+  margin-top: 30px;
+}
+/* Error message */
+.error-container{
+  border: 1px solid rgb(255, 86, 86);
+  border-radius: 10px;
+  padding: 10px;
+}
+.error p{
+  font-size: 12px;
+  color: rgb(255, 86, 86);
+  margin-bottom: 5px;
+}
+.show-duplication{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.show-duplication div{
+  color: rgb(255, 86, 86);
+  cursor: pointer;
+}
+.show-duplication span{
+  color: rgb(255, 86, 86);
+  margin-left: 15px;
+  margin-right: 15px;
 }
